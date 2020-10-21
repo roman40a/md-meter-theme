@@ -1,0 +1,124 @@
+.site-footer {
+    background-color: var(--black);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.site-footer__top {
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo__icon {
+    width: 48px;
+    height: 48px;
+}
+
+.footer-logo__text {
+    margin-left: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: #A3A3AD;
+}
+
+.footer-policy-wrapper {
+    display: none;
+}
+
+.footer-copy-right {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-footer__bottom {
+    height: 40px;
+    border-top: 1px solid #333338;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-policy {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #82828C;
+}
+
+@media screen and (min-width: 768px) {
+    .site-footer__top {
+        height: 120px;
+    }
+
+    .site-footer__bottom {
+        height: 63px;
+        justify-content: center;
+    }
+
+    .footer-logo__icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .footer-logo__text {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .footer-copy-right {
+        font-size: 17px;
+        line-height: 26px;
+    }
+
+    .footer-policy {
+        margin-left: 48px;
+        font-size: 17px;
+        line-height: 26px;
+    }
+
+    .footer-policy:first-child {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .site-footer__top {
+        margin: 0 auto;
+        max-width: 1120px;
+        height: 160px;
+    }
+
+    .site-footer__bottom {
+        display: none;
+    }
+
+    .footer-policy-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-policy {
+        font-size: 17px;
+        line-height: 26px;
+    }
+}
