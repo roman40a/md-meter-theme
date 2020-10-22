@@ -7,11 +7,7 @@
     border-left: none;
 }
 
-.options-list-ipad {
-    display: none;
-}
-
-.options-list-desktop {
+.options-list-ipad, .options-list-desktop {
     display: none;
 }
 
