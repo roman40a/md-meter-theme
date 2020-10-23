@@ -14,21 +14,9 @@
         <div class="newest-posts__posts-wrapper">
 
             {{#foreach posts limit="4"}}
-                <a href="{{url}}" class="pre-post">
-                    <div class="pre-post__img-wrapper">
-                        <img src="{{feature_image}}" />
-                    </div>
-                    <div class="pre-post__title">{{title}}</div>
-                    <div class="pre-post__description">{{excerpt}}</div>
-                    <div class="pre-post__tags">
-                        {{#foreach tags}}
-                            <div class="pre-post__sign-wrapper">
-                                <img src="{{asset "images/home/newest-posts/paper-icon.svg"}}" class="pre-post__sign" />
-                                {{name}}
-                            </div>
-                        {{/foreach}}
-                    </div>
-                </a>
+                <div class="home-pre-post-wrapper">
+                    {{> "pre-post"}}
+                </div>
             {{/foreach}}
 
         </div>
