@@ -2,7 +2,12 @@
     <div class="site-header__content">
         {{#link href="/" class="site-logo__link"}}
             <div class="site-logo">
-                <img src="{{asset "images/logo.svg"}}" class="site-logo__image" />
+                {{#if @site.logo}}
+                    <img src="{{@site.logo}}" class="site-logo__image" />
+                {{else}}
+                    <img src="{{asset "images/logo.svg"}}" class="site-logo__image" />
+                {{/if}}
+
                 <p class="site-logo__title">
                     <span class="site-logo__line1">Decibel</span>
                     <span class="site-logo__line2">Sound Meter Pro</span>
@@ -11,33 +16,13 @@
         {{/link}}
         <nav class="top-navigation">
             <ul class="top-navigation__list">
-                <li class="top-navigation__item">
-                    {{#link href="/blog" class="top-navigation__label  top-navigation__blog-label" activeClass="top-navigation__label-active"}}
-                        Блог
-                    {{/link}}
-                    <img src="{{asset "images/blog-circle.svg"}}" class="top-navigation__blog-circle" />
-                    <img src="{{asset "images/blog-staff.svg"}}" class="top-navigation__blog-staff" />
-                </li>
-                <li class="top-navigation__item">
-                    {{#link href="/video" class="top-navigation__label" activeClass="top-navigation__label-active"}}
-                        Видео
-                    {{/link}}
-                </li>
-                <li class="top-navigation__item">
-                    {{#link href="/articles" class="top-navigation__label" activeClass="top-navigation__label-active"}}
-                        Статьи
-                    {{/link}}
-                </li>
-                <li class="top-navigation__item">
-                    {{#link href="/infographic" class="top-navigation__label" activeClass="top-navigation__label-active"}}
-                        Инфографика
-                    {{/link}}
-                </li>
-                <li class="top-navigation__item">
-                    {{#link href="/tiktok" class="top-navigation__label" activeClass="top-navigation__label-active"}}
-                        TIKTOK
-                    {{/link}}
-                </li>
+                {{#foreach @site.navigation}}
+                    <li class="top-navigation__item">
+                        {{#link href=url class="top-navigation__label" activeClass="top-navigation__label-active"}}
+                            {{label}}
+                        {{/link}}
+                    </li>
+                {{/foreach}}
             </ul>
         </nav>
         <a href="#" class="appstore-button">

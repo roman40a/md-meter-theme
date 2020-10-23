@@ -89,6 +89,34 @@
         align-items: center;
     }
 
+    .top-navigation__item:first-child {
+        position: relative;
+        padding-right: 25px;
+    }
+
+    .top-navigation__item:first-child:after {
+        content: '';
+        height: 31px;
+        width: 10px;
+        background-image: url("../images/blog-staff.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .top-navigation__item:first-child:before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        background-image: url("../images/blog-circle.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 18px;
+        top: 2px;
+    }
+
     .top-navigation__label {
         font-style: normal;
         font-weight: 500;
