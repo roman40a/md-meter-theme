@@ -28,7 +28,7 @@ html, body {
     overflow-x: hidden;
 }
 
-p {
+p, ul {
     margin: 0;
     padding: 0;
 }
@@ -41,7 +41,17 @@ p {
 
 .body-wrapper {
     flex: 1 0 0;
-    margin-top: 96px;
+    margin-top: 56px;
+}
+@media screen and (min-width: 768px) {
+    .body-wrapper {
+        margin-top: 88px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .body-wrapper {
+        margin-top: 96px;
+    }
 }
 
 * {
