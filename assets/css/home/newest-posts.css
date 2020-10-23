@@ -36,7 +36,11 @@
     background: #FFFFFF;
     border: 1px solid #E0E0E7;
     box-sizing: border-box;
-    box-shadow: 0 2px 12px rgba(130, 130, 140, 0.16)
+    box-shadow: 0 2px 12px rgba(130, 130, 140, 0.16);
+
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
 }
 
 .pre-post:nth-child(4) {
@@ -72,6 +76,12 @@
     font-size: 17px;
     line-height: 26px;
     color: var(--darkgray);
+    flex: 1 0 0;
+}
+
+.pre-post__tags {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .pre-post__sign-wrapper {

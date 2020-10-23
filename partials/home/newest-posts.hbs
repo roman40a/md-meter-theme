@@ -13,66 +13,23 @@
         </div>
         <div class="newest-posts__posts-wrapper">
 
-            <div class="pre-post">
-                <div class="pre-post__img-wrapper">
-                    <img src="{{asset "images/home/newest-posts/post-example-image.svg"}}" />
-                </div>
-                <div class="pre-post__title">
-                    How to save 50% of a work day when managing user reviews
-                </div>
-                <div class="pre-post__description">
-                    How to save 50% of a work day when managing mobile user reviews. Learn how can Customer Support teams save 50% of their work day when dealing with user.
-                </div>
-                <div class="pre-post__sign-wrapper">
-                    <img src="{{asset "images/home/newest-posts/paper-icon.svg"}}" class="pre-post__sign" />
-                    Статьи
-                </div>
-            </div>
-            <div class="pre-post">
-                <div class="pre-post__img-wrapper">
-                    <img src="{{asset "images/home/newest-posts/post-example-image.svg"}}" />
-                </div>
-                <div class="pre-post__title">
-                    How to save 50% of a work day when managing user reviews
-                </div>
-                <div class="pre-post__description">
-                    How to save 50% of a work day when managing mobile user reviews. Learn how can Customer Support teams save 50% of their work day when dealing with user.
-                </div>
-                <div class="pre-post__sign-wrapper">
-                    <img src="{{asset "images/home/newest-posts/paper-icon.svg"}}" class="pre-post__sign" />
-                    Статьи
-                </div>
-            </div>
-            <div class="pre-post">
-                <div class="pre-post__img-wrapper">
-                    <img src="{{asset "images/home/newest-posts/post-example-image.svg"}}" />
-                </div>
-                <div class="pre-post__title">
-                    How to save 50% of a work day when managing user reviews
-                </div>
-                <div class="pre-post__description">
-                    How to save 50% of a work day when managing mobile user reviews. Learn how can Customer Support teams save 50% of their work day when dealing with user.
-                </div>
-                <div class="pre-post__sign-wrapper">
-                    <img src="{{asset "images/home/newest-posts/paper-icon.svg"}}" class="pre-post__sign" />
-                    Статьи
-                </div>
-            </div>
-            <div class="pre-post">
-                <div class="pre-post__img-wrapper">
-                    <img src="{{asset "images/home/newest-posts/post-example-image.svg"}}" />
-                </div>
-                <div class="pre-post__title">
-                    How to save 50% of a work day when managing user reviews
-                </div>
-                <div class="pre-post__description">
-                    How to save 50% of a work day when managing mobile user reviews. Learn how can Customer Support teams save 50% of their work day when dealing with user.
-                </div>
-                <div class="pre-post__sign-wrapper">
-                    <img src="{{asset "images/home/newest-posts/paper-icon.svg"}}" class="pre-post__sign" />
-                    Статьи
-                </div>
-            </div>
+            {{#foreach posts limit="4"}}
+                <a href="{{url}}" class="pre-post">
+                    <div class="pre-post__img-wrapper">
+                        <img src="{{feature_image}}" />
+                    </div>
+                    <div class="pre-post__title">{{title}}</div>
+                    <div class="pre-post__description">{{excerpt}}</div>
+                    <div class="pre-post__tags">
+                        {{#foreach tags}}
+                            <div class="pre-post__sign-wrapper">
+                                <img src="{{asset "images/home/newest-posts/paper-icon.svg"}}" class="pre-post__sign" />
+                                {{name}}
+                            </div>
+                        {{/foreach}}
+                    </div>
+                </a>
+            {{/foreach}}
 
         </div>
     </div>
