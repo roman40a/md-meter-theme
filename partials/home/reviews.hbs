@@ -200,3 +200,22 @@
         </div>
     </div>
 </div>
+
+<script>
+    const reviewCircleLinks = document.querySelectorAll('a[href^="#home-reviews__content"]');
+    reviewCircleLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            history.pushState({}, "", link.href);
+            const hash = window.location.hash;
+            const groups = document.querySelectorAll('.reviews-group');
+            groups.forEach(group => {
+                if (group.id === hash.slice(1)) {
+                    group.style.display = 'flex';
+                } else {
+                    group.style.display = 'none';
+                }
+            })
+        });
+    });
+</script>
