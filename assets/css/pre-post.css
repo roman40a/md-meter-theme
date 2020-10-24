@@ -74,6 +74,54 @@
     margin-right: 8px;
 }
 
-@media screen and (min-width: 768px) {  }
+@media screen and (min-width: 768px) {
+    .pre-post-featured .pre-post__img-wrapper {
+        height: 406px;
+    }
 
-@media screen and (min-width: 1440px) {  }
+    .pre-post-featured .pre-post__title {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 0.01em;
+        margin-top: 32px;
+    }
+
+    .pre-post-featured .pre-post__description {
+        margin-top: 24px;
+        font-size: 20px;
+        line-height: 34px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .pre-post.pre-post-featured {
+        flex-direction: row;
+        padding: 16px;
+    }
+    .pre-post-featured .pre-post__img-wrapper {
+        height: 100%;
+        width: 605px;
+    }
+    .pre-post-featured .pre-post__text-block {
+        margin-left: 40px;
+        padding: 0;
+        padding-top: 16px;
+        padding-right: 24px;
+    }
+
+    .pre-post-featured .pre-post__title {
+        font-size: 32px;
+        line-height: 40px;
+        margin-top: 0;
+    }
+
+    .pre-post-featured .pre-post__description {
+        font-size: 20px;
+        line-height: 34px;
+        margin: 24px 0 0 0;
+    }
+
+    .pre-post-featured .pre-post__sign-wrapper {
+        margin: 8px 0 0 0;
+    }
+}

@@ -1,2 +1,11 @@
 {{!< default}}
-<main>index</main>
+<main class="blog">
+    <div class="blog__content">
+        {{#foreach posts}}
+            <div class="blog-pre-post-wrapper  {{#if featured}}blog-pre-post-wrapper-featured{{/if}}">
+                {{> "pre-post" parameter="true"}}
+            </div>
+        {{/foreach}}
+    </div>
+    {{pagination}}
+</main>

@@ -1,4 +1,5 @@
-<a href="{{url}}" class="pre-post">
+<a href="{{url}}" class="pre-post {{#if featured}}{{#if parameter}}pre-post-featured{{/if}}{{/if}}">
+    {{log parameter}}
     <div class="pre-post__img-wrapper">
         <img src="{{feature_image}}" />
     </div>

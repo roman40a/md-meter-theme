@@ -12,13 +12,13 @@
             <span>Всё о шуме и методах борьбы с ним читайте <a href="/blog">в блоге</a></span>
         </div>
         <div class="newest-posts__posts-wrapper">
-
-            {{#foreach posts limit="4"}}
-                <div class="home-pre-post-wrapper">
-                    {{> "pre-post"}}
-                </div>
-            {{/foreach}}
-
+            {{#get "posts" include="tags,authors"}}
+                {{#foreach posts limit="4"}}
+                    <div class="home-pre-post-wrapper">
+                        {{> "pre-post" }}
+                    </div>
+                {{/foreach}}
+            {{/get}}
         </div>
     </div>
 </div>
