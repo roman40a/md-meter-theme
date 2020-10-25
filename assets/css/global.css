@@ -34,13 +34,16 @@ p, ul {
 }
 
 .site-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 0;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    display: block;
+    /*flex: 1 0 0;*/
+    width: 100%;
 }
 
 .body-wrapper {
-    flex: 1 0 0;
+    /*flex: 1 0 0;*/
+    width: 100%;
     margin-top: 56px;
     display: flex;
 }
