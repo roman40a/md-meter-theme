@@ -1,0 +1,92 @@
+.top-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 304px;
+    padding: 0 24px;
+}
+
+
+.pagination {
+    margin: 24px auto 48px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    max-width: 304px;
+    padding: 0 24px;
+}
+
+.pagination-previous, .top-block__pagination-previous, .pagination-next, .top-block__pagination-next, .page-number, .page-number a, .ellipsis {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--darkgray);
+}
+
+.current {
+    width: 48px;
+    height: 48px;
+    left: 31px;
+    top: 2840px;
+
+    border: 1px solid var(--darkred);
+    box-sizing: border-box;
+    color: var(--darkred);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.ellipsis:before {
+    content: '...';
+}
+
+.pagination-previous a, .top-block__pagination-previous a, .pagination-next a, .top-block__pagination-next a {
+    color: var(--darkgray);
+}
+
+.pagination-previous img, .top-block__pagination-previous img, .pagination-previous a img, .top-block__pagination-previous a img {
+    margin-right: 12px;
+}
+
+.pagination-next img, .top-block__pagination-next img, .pagination-next a img, .top-block__pagination-next a img {
+    margin-left: 12px;
+}
+
+.pagination-previous, .top-block__pagination-previous, .pagination-next, .top-block__pagination-next, .pagination-previous a, .top-block__pagination-previous a, .pagination-next a, .top-block__pagination-next a {
+    display: flex;
+    align-items: center;
+}
+
+.pagination-previous, .pagination-next {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .top-block {
+        display: none;
+    }
+
+    .pagination {
+        margin: 56px auto 64px auto;
+        width: 646px;
+        max-width: none;
+        padding: 0;
+    }
+
+    .pagination-previous, .pagination-next {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .pagination {
+        margin: 64px auto 72px auto;
+    }
+}

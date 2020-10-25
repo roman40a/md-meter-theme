@@ -1,9 +1,61 @@
-<nav class="pagination" role="navigation">
+<div style="display: none;">
+    <span class="curr-page">{{page}}</span>
+    <span class="total-pages">{{pages}}</span>
+</div>
+
+<div class="top-block">
     {{#if prev}}
-        <a class="newer-posts" href="{{page_url prev}}">&larr; Newer Posts</a>
+        <div class="top-block__pagination-previous">
+            <a href="{{page_url prev}}">
+                <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
+                Previous
+            </a>
+        </div>
+    {{else}}
+        <div class="top-block__pagination-previous disabled">
+            <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
+            Previous
+        </div>
     {{/if}}
-    <span class="page-number">Page {{page}} of {{pages}}</span>
     {{#if next}}
-        <a class="older-posts" href="{{page_url next}}">Older Posts &rarr;</a>
+        <div class="top-block__pagination-next">
+            <a href="{{page_url next}}">
+                Next
+                <img src="{{asset "images/pagination/next-arrow.svg"}}" />
+            </a>
+        </div>
+    {{else}}
+        <div class="top-block__pagination-next disabled">
+            Next
+            <img src="{{asset "images/pagination/next-arrow.svg"}}" />
+        </div>
     {{/if}}
-</nav>
+</div>
+<ul class="pagination text-center" role="navigation" aria-label="Pagination">
+    {{#if prev}}
+        <li class="pagination-previous">
+            <a href="{{page_url prev}}">
+                <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
+                Previous
+            </a>
+        </li>
+    {{else}}
+        <li class="pagination-previous disabled">
+            <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
+            Previous
+        </li>
+    {{/if}}
+    {{#if next}}
+        <li class="pagination-next">
+            <a href="{{page_url next}}">
+                Next
+                <img src="{{asset "images/pagination/next-arrow.svg"}}" />
+            </a>
+        </li>
+    {{else}}
+        <li class="pagination-next disabled">
+            Next
+            <img src="{{asset "images/pagination/next-arrow.svg"}}" />
+        </li>
+    {{/if}}
+</ul>

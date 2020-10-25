@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset "built/home/newest-posts.css"}}" />
 
     <link rel="stylesheet" type="text/css" href="{{asset "built/blog.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "built/pagination.css"}}" />
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
@@ -46,6 +47,15 @@
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
+
+    {{!-- jQuery, required for fitvids --}}
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+    </script>
+    {{!-- Fitvids (for responsive video embeds), infinite scroll, floating header, and gallery card support --}}
+    <script src="{{asset "assets/js/index.js"}}"></script>
 
 </body>
 </html>
