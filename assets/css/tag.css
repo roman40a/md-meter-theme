@@ -8,7 +8,17 @@
     font-size: 16px;
     line-height: 24px;
     color: var(--gray);
-    margin-left: 16px;
+    padding: 0 8px;
+    white-space: nowrap;
+}
+
+a.tag {
+    color: var(--gray);
+    text-decoration: none;
+}
+
+a.tag:visited {
+    color: var(--gray);
 }
 
 .tag:first-child {
