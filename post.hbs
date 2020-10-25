@@ -1,0 +1,26 @@
+{{!< default}}
+{{#post}}
+
+    <article class="{{post_class}}">
+        <header class="post-header">
+            <h1 class="post-title">{{title}}</h1>
+            <section class="post-meta">
+                {{#foreach tags}}
+                    {{>"tag"}}
+                {{/foreach}}
+            </section>
+            {{#if feature_image}}
+                <section class="post-feature-image">
+                    <img src="{{img_url feature_image}}" alt="{{title}}" />
+                </section>
+            {{/if}}
+            {{#if excerpt}}
+                <p>{{excerpt}}</p>
+            {{/if}}
+        </header>
+        <section class="post-content">
+            {{content}}
+        </section>
+    </article>
+
+{{/post}}

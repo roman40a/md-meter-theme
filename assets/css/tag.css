@@ -1,0 +1,26 @@
+.tag {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--gray);
+    margin-left: 16px;
+}
+
+.tag:first-child {
+    margin-left: 0;
+}
+
+.tag__sign {
+    width: 13px;
+    height: 13px;
+    margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1440px) {}
