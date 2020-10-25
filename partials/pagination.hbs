@@ -3,59 +3,120 @@
     <span class="total-pages">{{pages}}</span>
 </div>
 
-<div class="top-block">
-    {{#if prev}}
-        <div class="top-block__pagination-previous">
-            <a href="{{page_url prev}}">
+{{#if prev}}
+    <div class="top-block">
+        {{#if prev}}
+            <div class="top-block__pagination-previous">
+                <a href="{{page_url prev}}">
+                    <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
+                    Previous
+                </a>
+            </div>
+        {{else}}
+            <div class="top-block__pagination-previous disabled">
                 <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
                 Previous
-            </a>
-        </div>
-    {{else}}
-        <div class="top-block__pagination-previous disabled">
-            <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
-            Previous
-        </div>
-    {{/if}}
-    {{#if next}}
-        <div class="top-block__pagination-next">
-            <a href="{{page_url next}}">
+            </div>
+        {{/if}}
+        {{#if next}}
+            <div class="top-block__pagination-next">
+                <a href="{{page_url next}}">
+                    Next
+                    <img src="{{asset "images/pagination/next-arrow.svg"}}" />
+                </a>
+            </div>
+        {{else}}
+            <div class="top-block__pagination-next disabled">
                 Next
                 <img src="{{asset "images/pagination/next-arrow.svg"}}" />
-            </a>
-        </div>
-    {{else}}
-        <div class="top-block__pagination-next disabled">
-            Next
-            <img src="{{asset "images/pagination/next-arrow.svg"}}" />
-        </div>
-    {{/if}}
-</div>
-<ul class="pagination text-center" role="navigation" aria-label="Pagination">
-    {{#if prev}}
-        <li class="pagination-previous">
-            <a href="{{page_url prev}}">
+            </div>
+        {{/if}}
+    </div>
+    <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+        {{#if prev}}
+            <li class="pagination-previous">
+                <a href="{{page_url prev}}">
+                    <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
+                    Previous
+                </a>
+            </li>
+        {{else}}
+            <li class="pagination-previous disabled">
                 <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
                 Previous
-            </a>
-        </li>
-    {{else}}
-        <li class="pagination-previous disabled">
-            <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
-            Previous
-        </li>
-    {{/if}}
-    {{#if next}}
-        <li class="pagination-next">
-            <a href="{{page_url next}}">
+            </li>
+        {{/if}}
+        {{#if next}}
+            <li class="pagination-next">
+                <a href="{{page_url next}}">
+                    Next
+                    <img src="{{asset "images/pagination/next-arrow.svg"}}" />
+                </a>
+            </li>
+        {{else}}
+            <li class="pagination-next disabled">
                 Next
                 <img src="{{asset "images/pagination/next-arrow.svg"}}" />
-            </a>
-        </li>
-    {{else}}
-        <li class="pagination-next disabled">
-            Next
-            <img src="{{asset "images/pagination/next-arrow.svg"}}" />
-        </li>
-    {{/if}}
-</ul>
+            </li>
+        {{/if}}
+    </ul>
+{{else if next}}
+    <div class="top-block">
+        {{#if prev}}
+            <div class="top-block__pagination-previous">
+                <a href="{{page_url prev}}">
+                    <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
+                    Previous
+                </a>
+            </div>
+        {{else}}
+            <div class="top-block__pagination-previous disabled">
+                <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
+                Previous
+            </div>
+        {{/if}}
+        {{#if next}}
+            <div class="top-block__pagination-next">
+                <a href="{{page_url next}}">
+                    Next
+                    <img src="{{asset "images/pagination/next-arrow.svg"}}" />
+                </a>
+            </div>
+        {{else}}
+            <div class="top-block__pagination-next disabled">
+                Next
+                <img src="{{asset "images/pagination/next-arrow.svg"}}" />
+            </div>
+        {{/if}}
+    </div>
+    <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+        {{#if prev}}
+            <li class="pagination-previous">
+                <a href="{{page_url prev}}">
+                    <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
+                    Previous
+                </a>
+            </li>
+        {{else}}
+            <li class="pagination-previous disabled">
+                <img src="{{asset "images/pagination/prev-arrow.svg"}}" />
+                Previous
+            </li>
+        {{/if}}
+        {{#if next}}
+            <li class="pagination-next">
+                <a href="{{page_url next}}">
+                    Next
+                    <img src="{{asset "images/pagination/next-arrow.svg"}}" />
+                </a>
+            </li>
+        {{else}}
+            <li class="pagination-next disabled">
+                Next
+                <img src="{{asset "images/pagination/next-arrow.svg"}}" />
+            </li>
+        {{/if}}
+    </ul>
+{{else}}
+    <div></div>
+{{/if}}
