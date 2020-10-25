@@ -1,9 +1,15 @@
-.blog {}
+.blog {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+}
 
 .blog__content {
     padding: 24px 15px;
+    padding-bottom: 0;
     max-width: 344px;
     margin: 0 auto;
+    flex: 1 0 0;
 }
 
 .blog-pre-post-wrapper {
@@ -13,13 +19,10 @@
     max-width: 344px;
 }
 
-.blog-pre-post-wrapper:first-child {
-    margin-top: 0;
-}
-
 @media screen and (min-width: 768px) {
     .blog__content {
         padding: 32px 24px;
+        padding-bottom: 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -46,10 +49,12 @@
     }
     .blog__content {
         padding: 43px 24px;
-        max-width: 1168px;
+        padding-bottom: 0;
+        max-width: 1215px;
         margin: 0 auto;
+        justify-content: flex-start;
     }
     .blog-pre-post-wrapper {
-        margin-top: 44px;
+        margin: 22px;
     }
 }
