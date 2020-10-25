@@ -76,10 +76,9 @@
     }
 
     .top-navigation__list {
-        width: 428px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         list-style-type: none;
     }
 
@@ -186,10 +185,6 @@
 
     .top-navigation {
         margin-left: 92px;
-    }
-
-    .top-navigation__list {
-        width: 526px;
     }
 
     .top-navigation__label {
