@@ -126,6 +126,8 @@
         text-transform: uppercase;
         color: var(--darkgray);
         text-decoration: none;
+        padding: 0 8px;
+        white-space: nowrap;
     }
 
     .top-navigation__label-active {

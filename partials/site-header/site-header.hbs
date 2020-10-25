@@ -15,18 +15,27 @@
             </div>
         {{/link}}
         <div class="navigation-mobile navigation-mobile-active">
-            <span>Блог</span>
+            {{#link href="/blog/" class="navigation-mobile__link" activeClass="navigation-mobile__link-active"}}
+                Блог
+            {{/link}}
             <img src="{{asset "images/nav-arrow.svg"}}" class="navigation-mobile__icon" />
         </div>
         <nav class="top-navigation">
             <ul class="top-navigation__list">
-                {{#foreach @site.navigation}}
-                    <li class="top-navigation__item">
-                        {{#link href=url class="top-navigation__label" activeClass="top-navigation__label-active"}}
-                            {{label}}
-                        {{/link}}
-                    </li>
-                {{/foreach}}
+                <li class="top-navigation__item">
+                    {{#link href="/blog/" class="navigation-mobile__link" activeClass="navigation-mobile__link-active"}}
+                        Блог
+                    {{/link}}
+                </li>
+                {{#get "tags"}}
+                    {{#foreach tags}}
+                        <li class="top-navigation__item">
+                            {{#link href=url class="top-navigation__label" activeClass="top-navigation__label-active"}}
+                                {{name}}
+                            {{/link}}
+                        </li>
+                    {{/foreach}}
+                {{/get}}
             </ul>
         </nav>
         <a href="#" class="appstore-button">
@@ -40,13 +49,15 @@
         </a>
     </div>
     <ul class="navigation-mobile__list">
-        {{#foreach @site.navigation}}
-            <li class="navigation-mobile__item">
-                {{#link href=url class="navigation-mobile__link" activeClass="navigation-mobile__link-active"}}
-                    {{label}}
-                {{/link}}
-            </li>
-        {{/foreach}}
+        {{#get "tags"}}
+            {{#foreach tags}}
+                <li class="navigation-mobile__item">
+                    {{#link href=url class="navigation-mobile__link" activeClass="navigation-mobile__link-active"}}
+                        {{name}}
+                    {{/link}}
+                </li>
+            {{/foreach}}
+        {{/get}}
     </ul>
 </header>
 
