@@ -14,6 +14,10 @@
                 </p>
             </div>
         {{/link}}
+        <div class="navigation-mobile navigation-mobile-active">
+            <span>Блог</span>
+            <img src="{{asset "images/nav-arrow.svg"}}" class="navigation-mobile__icon" />
+        </div>
         <nav class="top-navigation">
             <ul class="top-navigation__list">
                 {{#foreach @site.navigation}}
@@ -35,4 +39,22 @@
             </div>
         </a>
     </div>
+    <ul class="navigation-mobile__list">
+        {{#foreach @site.navigation}}
+            <li class="navigation-mobile__item">
+                {{#link href=url class="navigation-mobile__link" activeClass="navigation-mobile__link-active"}}
+                    {{label}}
+                {{/link}}
+            </li>
+        {{/foreach}}
+    </ul>
 </header>
+
+<script>
+    const navArrow = document.querySelector('.navigation-mobile__icon');
+    const navMobileList = document.querySelector('.navigation-mobile__list');
+    navArrow.addEventListener('click', () => {
+        navMobileList.classList.toggle('navigation-mobile__list-open');
+        navArrow.classList.toggle('navigation-mobile__icon-open');
+    });
+</script>
