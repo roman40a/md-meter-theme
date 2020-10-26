@@ -46,15 +46,18 @@ p, ul {
     width: 100%;
     margin-top: 56px;
     display: flex;
+    min-height: calc(100% - 128px - 56px);
 }
 @media screen and (min-width: 768px) {
     .body-wrapper {
         margin-top: 88px;
+        min-height: calc(100% - 183px - 88px);
     }
 }
 @media screen and (min-width: 1440px) {
     .body-wrapper {
         margin-top: 96px;
+        min-height: calc(100% - 160px - 88px);
     }
 }
 
